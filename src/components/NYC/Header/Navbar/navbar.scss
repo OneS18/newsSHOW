@@ -1,0 +1,108 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: calc(10px + 1.5vw);
+    max-width: 10px;
+    cursor: pointer;
+    margin: 30px 50px;
+    color: rgb(132, 141, 49);
+    font-family: 'Diplomata SC', cursive;
+}
+
+.menu-icon {
+    display: none;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    transition: transform 0.25s ease-out;
+    font-family: 'Bebas Neue',
+        cursive;
+    font-family: 'Comfortaa',
+        cursive;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(132, 141, 49);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+
+nav ul li a:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media (max-width: 880px) {
+    .menu-icon {
+        margin-right: 50px;
+        fill: #fce57e;
+        width: 35px;
+        cursor: pointer;
+        display: block;
+    }
+
+    nav ul {
+        width: 100%;
+        background-color: rgb(12, 9, 9);
+        opacity: 0.5;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        height: 35px;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        font-family: 'Bebas Neue',
+            cursive;
+        font-family: 'Comfortaa',
+            cursive;
+        text-transform: uppercase;
+
+    }
+
+
+    .hidemenu {
+        max-height: 0px;
+        transition: all 0.5 ease-out;
+    }
+
+    .showmenu {
+        max-height: 200px;
+        transition: all 0.5s ease-out;
+    }
+
+    .hide {
+        display: none;
+    }
+}
