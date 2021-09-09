@@ -16,7 +16,6 @@ const News = () => {
     axios
       .get(url)
       .then((res) => {
-        console.log(res);
         setPosts(res.data.articles);
       })
       .catch((err) => {
@@ -26,9 +25,9 @@ const News = () => {
 
   return (
     <div>
-      {posts.map((post) => (
+      {posts.map((post, idx) => (
         <Article
-          key={post.id}
+          key={idx}
           author={post.author}
           img={post.urlToImage}
           title={post.title}
